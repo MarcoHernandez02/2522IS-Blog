@@ -1,108 +1,174 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('blog.template.layout')
+@section('titulo')
+<h1>PROGRAMACION CLIENTE SERVIDOR</h1>
 
-<head>
-  <meta charset="UTF-8">
-  <meta content="IE=edge" http-equiv="X-UA-Compatible">
-  <meta content="width=device-width,initial-scale=1" name="viewport">
-  <meta content="description" name="description">
-  <meta name="google" content="notranslate" />
-  <meta content="Mashup templates have been developped by Orson.io team" name="author">
+@endsection
 
-  <!-- Disable tap highlight on IE -->
-  <meta name="msapplication-tap-highlight" content="no">
-  
-  <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-icon-180x180.png">
-  <link href="./favicon.ico" rel="icon">
-  
-  <title>My Personal Blog</title>  
-
-<link href="./Css/main.3da94fde.css" rel="stylesheet"></head>
-
-<body>
-
- <!-- Add your content of header -->
-
-<header>
-  <nav class="navbar navbar-fixed-top navbar-default">
-    <div class="container">
-        <button type="button" class="navbar-toggle">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        
-      <nav class="navbar-fullscreen" id="navbar-middle">
-        <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <ul class="navbar-fullscreen-links">
-          <li><a href="{{route('inicio')}}" title="">Inicio</a></li>
-          <li><a href="{{route('project')}}" title="">Proyecto</a></li>
-          <li><a href="{{route('about')}}" title="">Sobre mí</a></li>
-          <li><a href="{{route('components')}}" title="">Componentes</a></li>
-        </ul>
-
-        <div class="footer-container">
-           
-          <p><small>© Untitled | Website created with <a href="http://www.mashup-template.com/" title="Create website with free html template">Mashup Template</a>/<a href="https://www.unsplash.com/" title="Beautiful Free Images">Unsplash</a></small></p>
-          <p class="footer-share-icons">
-              <a href="https://www.twitter.com" class="fa-icon" title="">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
-              </a>
-              <a href="https://www.linkedin.com" class="fa-icon" title="">
-                  <i class="fa fa-instagram" aria-hidden="true"></i>
-              </a>
-              <a href="https://www.behance.com" class="fa-icon" title="">
-                  <i class="fa fa-behance" aria-hidden="true"></i>
-              </a>
-              <a href="https://www.vimeo.com" class="fa-icon" title="">
-                  <i class="fa fa-vimeo" aria-hidden="true"></i>
-              </a>
-          </p>
-                       
-        </div>
-
-
-      </nav> 
-    
-    </div>
-  </nav>
-</header>
-
-  
-<div class="hero-full-container background-image-container white-text-container" style="background-image:url('./images/img-home.jpg')">
-  <div class="overlay-gradient"></div>
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-md-7 col-md-offset-1">
-        <div class="hero-full-wrapper">
-          <div class="text-content">
-            <h1>Marco Hernández</h1>
-            <p>Técnico en Informática, estudiante en ingeniería en software, apasionado por el fútbol. </p>
-          </div>
-        </div>
+@section('contenido')
+     
+      <!-- Testimonials Section -->
+      <div class="testimonials-container">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12 wow fadeInUp">
+                  <div class="title-un-icon"><i class="fa ion-quote"></i></div>
+                  <h3 class="title-un"> INGENIERÍA EN SOFTWARE </h3>
+                  <div id="owl-slide" class="testimonials owl-carousel">
+                     <div class="testimonial">
+                        <p> El propósito de la página es principalmente informativo, el contenido se enfoca a la asignatura de Programación Cliente - Servidor</p>
+                        <div class="client">
+                           <div class="client-info">
+                              <div class="client-name">
+                                 Marco Hernández
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="testimonial">
+                        <p>El aprendizaje que llevaremos a cabo en el transcurso del cuatrimestre escolar, será plasmado en esta página web</p>
+                        <div class="client">
+                           <div class="client-info">
+                              <div class="client-name">
+                                 Estefanía Chavez
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
       </div>
-    </div>
-  </div>
-</div>
+      <!-- End Testimonials Section -->
+      <!-- Portfolio Section -->
+      <div class="container-about-portfolio">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <h3 class="title-un">NUESTRO PROYECTO</h3>
+                  <div class="title-un-icon"><i class="fa ion-ios-heart-outline"></i></div>
+                  <p class="title-un-des">Con la finalidad de conocer los alcances del uso de laravel y blade, se desarrollo la siguiente página web con la finalidad de informar acerca de su funcionamiento</p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="gallery-portfolio-container">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <nav class="port-filter m-port-filter">
+                     <ul>
+                        <li class="active"><a href="#" data-filter="*">TODO</a></li>
+                        <li><a href="#" data-filter=".photography">Mapas</a></li>
+                        <li><a href="#" data-filter=".webdesign">Web design</a></li>
+              
+                        <li><a href="#" data-filter=".illustration ">Codigo </a></li>
+                        
+                     </ul>
+                  </nav>
+                  <div class="classic-portfolio col-3-portfolio portfolio gallery-portfolio shortc-mp">
+                     <div class="project-item applications illustration">
+                        <div class="project-image">
+                           <img src="images/gallery/i4.jpg" alt="">
+                           <div class="overlay">
+                              <div class="content-wrap">
+                                 <div class="overlay-content">
+                                    <h3><a href="#">VISUAL CODE</a></h3>
+                                    <ul class="entry-cat">
+                                       <li><a href="#"> </a></li>
+                                       <li><a href="#"> </a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="project-item illustration  webdesign">
+                        <div class="project-image">
+                           <img src="images/gallery/i5.jpg" alt="">
+                           <div class="overlay">
+                              <div class="content-wrap">
+                                 <div class="overlay-content">
+                                    <h3><a href="{{route('contacto')}}">Contacto</a></h3>
+                                    <ul class="entry-cat">
+                                       <li><a href="#"></a></li>
+                                       <li><a href="#"></a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="project-item webdesign branding applications photography">
+                        <div class="project-image">
+                           <img src="images/gallery/i6.jpg" alt="">
+                           <div class="overlay">
+                              <div class="content-wrap">
+                                 <div class="overlay-content">
+                                    <h3><a href="{{route('unidades')}}">Mapa conceptual</a></h3>
+                                    <ul class="entry-cat">
+                                       <li><a href="#"></a></li>
+                                       <li><a href="#"></a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="project-item webdesign illustration  ">
+                        <div class="project-image">
+                           <img src="images/gallery/i7.jpg" alt="">
+                           <div class="overlay">
+                              <div class="content-wrap">
+                                 <div class="overlay-content">
+                                    <h3><a href="{{route('personal')}}">Acerca de nosotros</a></h3>
+                                    <ul class="entry-cat">
+                                       <li><a href="#">  </a></li>
+                                       <li><a href="#">  </a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="project-item webdesign">
+                        <div class="project-image">
+                           <img src="images/gallery/i1.jpg" alt="">
+                           <div class="overlay">
+                              <div class="content-wrap">
+                                 <div class="overlay-content">
+                                    <h3><a href="#">Inicio</a></h3>
+                                    <ul class="entry-cat">
+                                       <li><a href="#">  </a></li>
+                                       <li><a href="#">  </a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="project-item applications photography">
+                        <div class="project-image">
+                           <img src="images/gallery/i2.jpg" alt="">
+                           <div class="overlay">
+                              <div class="content-wrap">
+                                 <div class="overlay-content">
+                                    <h3><a href="#">Unidad 1</a></h3>
+                                    <ul class="entry-cat">
+                                       <li><a href="#"> </a></li>
+                                       <li><a href="#"> </a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- End Portfolio Section nwesletter -->
+      
+@endsection
 
-<script>
-  document.addEventListener("DOMContentLoaded", function (event) {
-    navbarFixedTopAnimation();
-    closeMenuBeforeGoingToPage();
-  });
-</script>
-
-
-
-
-<script>
-    document.addEventListener("DOMContentLoaded", function (event) {
-      navbarToggleSidebar();
-      closeMenuBeforeGoingToPage();
-      navActivePage();
-    });
-</script>
- <script type="text/javascript" src="./Js/main.4c6e144e.js"></script></body>
-
-</html>

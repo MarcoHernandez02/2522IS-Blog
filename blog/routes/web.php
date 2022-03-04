@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\InicioController;
+use App\Http\Controllers\TemaController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,22 +16,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    
-    return view('blog.index');
-})->name('inicio');
 
-Route::get('/project', function () {
-   
-    return view('blog.project');  
-})->name('project');
+// -- InicioController 
+Route::get('/' , [InicioController::class, 'index'])->name('inicio');
 
-Route::get('/about', function () {
-   
-    return view('blog.about');  
-})->name('about');
+Route::get('/unidades' , [InicioController::class, 'unidades'])->name('unidades');
 
-Route::get('/components', function () {
-   
-    return view('blog.components');  
-})->name('components');
+Route::get('/contacto' , [InicioController::class, 'contacto'])->name('contacto');
+
+Route::get('/aboutus' , [InicioController::class, 'aboutus'])->name('personal');
+
+//Route::get('/unidad2' , [InicioController::class, 'unidad2'])->name('unidad2');
+
+// -- TemaController
+Route::get('/temas/tema1' , [TemaController::class, 't1'])->name('temas.tema1');
+
+Route::get('/unidad2' , [TemaController::class, 'mostrarTemas'])->name('uni2');
+
+
+/*
+Route::post('/contactar', 'EmailController@contact')->name('contact');
+//Ruta que esta señalando nuestro formulario
+*/
